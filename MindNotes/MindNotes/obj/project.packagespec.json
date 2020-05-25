@@ -1,0 +1,64 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/egor/Desktop/Учеба/nis/MindNotes/MindNotes/MindNotes/MindNotes.csproj",
+    "projectName": "MindNotes",
+    "projectPath": "/Users/egor/Desktop/Учеба/nis/MindNotes/MindNotes/MindNotes/MindNotes.csproj",
+    "outputPath": "/Users/egor/Desktop/Учеба/nis/MindNotes/MindNotes/MindNotes/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netstandard2.0"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netstandard2.0": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netstandard2.0": {
+      "dependencies": {
+        "NETStandard.Library": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.0.3, )",
+          "autoReferenced": true
+        },
+        "Xam.Plugin.Media": {
+          "target": "Package",
+          "version": "[5.0.1, )"
+        },
+        "Xamarin.Essentials": {
+          "target": "Package",
+          "version": "[1.5.3.2, )"
+        },
+        "Xamarin.Forms": {
+          "target": "Package",
+          "version": "[4.6.0.800, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+    }
+  }
+}

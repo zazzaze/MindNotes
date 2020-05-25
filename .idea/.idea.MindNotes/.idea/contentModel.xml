@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.arch.lifecycle.runtime/1.1.1.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.arch.lifecycle.viewmodel/1.1.1.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.animated.vector.drawable/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.compat/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.coordinaterlayout/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.design/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.media.compat/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.transition/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.v7.appcompat/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.v7.recyclerview/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.versionedparcelable/28.0.0.3/proguard/monoandroid90" t="Include">
+      <e p="proguard.txt" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/xamarin.forms/4.6.0.800/buildTransitive/MonoAndroid10" t="Include">
+      <e p="proguard.cfg" t="Include" />
+    </e>
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="MindNotes/MindNotes" t="IncludeRecursive">
+        <e p="Annotations.cs" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MainPage.xaml" t="Include" />
+        <e p="MainPage.xaml.cs" t="Include" />
+        <e p="MindNotes.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Note.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="App.xaml.g.cs" t="Include" />
+              <e p="MainPage.xaml.g.cs" t="Include" />
+              <e p="MindNotes.AssemblyInfo.cs" t="Include" />
+              <e p="Views" t="Include">
+                <e p="AllNotesPage.xaml.g.cs" t="Include" />
+                <e p="NotePage.xaml.g.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="ViewModels" t="Include">
+          <e p="NotePageViewModel.cs" t="Include" />
+          <e p="NotesListViewModel.cs" t="Include" />
+          <e p="NoteViewModel.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="AllNotesPage.xaml" t="Include" />
+          <e p="AllNotesPage.xaml.cs" t="Include" />
+          <e p="NotePage.xaml" t="Include" />
+          <e p="NotePage.xaml.cs" t="Include" />
+        </e>
+      </e>
+      <e p="MindNotes/MindNotes.Android" t="IncludeRecursive">
+        <e p="Assets" t="Include">
+          <e p="AboutAssets.txt" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MainActivity.cs" t="Include" />
+        <e p="MindNotes.Android.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AndroidManifest.xml" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="AboutResources.txt" t="Include" />
+          <e p="layout" t="Include">
+            <e p="Tabbar.axml" t="Include" />
+            <e p="Toolbar.axml" t="Include" />
+          </e>
+          <e p="Resource.Designer.cs" t="Include" />
+          <e p="values" t="Include">
+            <e p="colors.xml" t="Include" />
+            <e p="styles.xml" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="MindNotes/MindNotes.iOS" t="IncludeRecursive">
+        <e p="AppDelegate.cs" t="Include" />
+        <e p="Assets.xcassets" t="Include">
+          <e p="AppIcon.appiconset" t="Include">
+            <e p="Contents.json" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entitlements.plist" t="Include" />
+        <e p="Info.plist" t="Include" />
+        <e p="Main.cs" t="Include" />
+        <e p="MindNotes.iOS.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="LaunchScreen.storyboard" t="Include" />
+        </e>
+      </e>
+      <e p="MindNotes.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_MindNotes.86046822.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Developer/Xamarin/android-sdk-macosx/platforms/android-28/data/res" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+  </component>
+</project>

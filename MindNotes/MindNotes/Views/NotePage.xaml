@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MindNotes.Views.NotePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Назад" Command="{Binding BackCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <StackLayout>
+                <Entry Placeholder="Введите название заметки" Text="{Binding Title}" FontSize="Large"/>
+                <Editor Placeholder="Текст заметки" Text="{Binding Text}" FontSize="Medium"/>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal" Grid.Row="1">
+            <Button VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                    Text="Выбрать фотографию" Clicked="PickPhotoButton_OnClicked"/>
+            <Button VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                    Text="Сделать фотографию" Clicked="TakePhotoButton_OnClicked"></Button>
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

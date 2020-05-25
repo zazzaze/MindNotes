@@ -9,6 +9,7 @@ namespace MindNotes
 {
     public partial class App : Application
     {
+        public const String ServerUrl = "http://62.113.116.228/";
         public App()
         {
             InitializeComponent();

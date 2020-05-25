@@ -17,7 +17,6 @@ namespace MindNotes.ViewModels
         
         public ICommand CreateNoteCommand { protected set; get; }
         public ICommand SaveNoteCommand { protected set; get; }
-        public ICommand DeleteNoteCommand { protected set; get; }
         private NoteViewModel _selectedNote;
         
         public INavigation Navigation { get; set; }

@@ -12,6 +12,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Удалить" Command="{Binding DeleteNoteCommand}" CommandParameter="{Binding .}" />
+                        </ViewCell.ContextActions>
                         <ViewCell.View>
                             <StackLayout>
                                 <Label Text="{Binding Title}" FontSize="Large" />

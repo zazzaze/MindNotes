@@ -7,23 +7,42 @@
         <ToolbarItem Text="Назад" Command="{Binding BackCommand}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="9*" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1"
+              AbsoluteLayout.LayoutFlags="All">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
         <ScrollView Grid.Row="0">
             <StackLayout>
-                <Entry Placeholder="Введите название заметки" Text="{Binding Title}" FontSize="Large"/>
-                <Editor Placeholder="Текст заметки" Text="{Binding Text}" FontSize="Medium"/>
+                <Entry Placeholder="Введите название заметки" Text="{Binding Title}" 
+                       FontSize="{OnPlatform Android=Title, iOS=Header}"/>
+                <Editor x:Name="NoteTextEditor" Placeholder="Текст заметки" Text="{Binding Text}" FontSize="Medium"
+                        AutoSize="TextChanges"/>
             </StackLayout>
         </ScrollView>
         <StackLayout Orientation="Horizontal" Grid.Row="1">
             <Button VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
                     Text="Выбрать фотографию" Clicked="PickPhotoButton_OnClicked"/>
             <Button VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
-                    Text="Сделать фотографию" Clicked="TakePhotoButton_OnClicked"></Button>
+                    Text="Сделать фотографию" Clicked="TakePhotoButton_OnClicked" />
         </StackLayout>
         </Grid>
+        <ContentView x:Name="TextFromPhotoEditorPopUp" BackgroundColor="#C0808080" VerticalOptions="FillAndExpand" 
+                     HorizontalOptions="FillAndExpand" IsVisible="False" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" Padding="10,0">
+            <StackLayout Padding="10" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout>
+                    <Label Text="Текст с картинки" FontSize="{OnPlatform Android=Title, iOS=Header}" />
+                    <Editor x:Name="TextFromPhotoEditor" FontSize="Medium" AutoSize="TextChanges"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Не добавлять текст" Clicked="CancelAddPhotoText"/>
+                        <Button Text="Добавить текст" Clicked="AddTextFromPhoto"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ContentView>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

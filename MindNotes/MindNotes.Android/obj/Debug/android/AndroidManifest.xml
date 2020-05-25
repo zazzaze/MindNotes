@@ -6,7 +6,7 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-feature android:name="android.hardware.camera" android:required="false" />
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
-  <application android:label="MindNotes.Android" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+  <application android:label="MindNotes.Android" android:usesCleartextTraffic="true" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:configChanges="orientation|screenSize" android:label="MindNotes" android:theme="@style/MainTheme" android:name="crc648c76abeb313435d7.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

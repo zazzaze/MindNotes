@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="MindNotes.Views.MindMap"
+             Title="Ментальная карта">
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Both"
+                    AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All">
+        <AbsoluteLayout x:Name="absoluteLayout"
+                        BackgroundColor="White">
+            <Button x:Name="ChooseCenterButton" Text="Добавить центр" IsVisible="{Binding IsCenterUnenabled}" 
+                    AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Clicked="OnSelectCenterTapped"/>
+        </AbsoluteLayout>
+        </ScrollView>
+            <ContentView x:Name="SelectNoteView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                         BackgroundColor="{StaticResource popupBackgroundColor}"
+                         IsVisible="False" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="10" BackgroundColor="White" MinimumWidthRequest="200">
+                    <Label Text="Выберите заметку" />
+                    <Picker x:Name="NotePicker" ItemsSource="{Binding ListViewModel.Notes}" />
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Закрыть" Clicked="OnPopupTapped" />
+                        <Button Text="Добавить" Clicked="AddNoteClicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

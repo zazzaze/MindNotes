@@ -45,8 +45,22 @@ namespace MindNotes.Views
                     Name = $"{DateTime.UtcNow}.jpg",
                     SaveToAlbum = true
                 };
-                MediaFile photo = await CrossMedia.Current.TakePhotoAsync(mediaOptions);
+                MediaFile photo = null;
+                try
+                {
+                    photo = await CrossMedia.Current.TakePhotoAsync(mediaOptions);
+                }
+                catch (Exception)
+                {
+                    await DisplayAlert("Ошибка", "При попытке открть камеру возникла ошибка", "Попробовать снова");
+                }
+                if (photo == null)
+                    return;
+                UploadPhoto(photo);
+                return;
             }
+            
+            await DisplayAlert("Ошибка", "Не удалось получить доступ к камере", "Поробовать снова");
         }
 
         private async void PickPhotoButton_OnClicked(object sender, EventArgs e)
@@ -54,6 +68,8 @@ namespace MindNotes.Views
             if (CrossMedia.Current.IsTakePhotoSupported)
             {
                 MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+                if (photo == null)
+                    return;
                 UploadPhoto(photo);
             }
         }

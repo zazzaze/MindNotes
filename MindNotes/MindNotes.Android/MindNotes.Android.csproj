@@ -14,7 +14,6 @@
         <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
         <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
         <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-        <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
         <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
         <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     </PropertyGroup>
@@ -66,7 +65,7 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\MindNotes\MindNotes.csproj">
-            <Project>{668F4979-A9FE-44F9-AFFB-EC52E95E10AF}</Project>
+            <Project>{A0F48F9E-21BE-4A4F-A4D3-44484F0897D4}</Project>
             <Name>MindNotes</Name>
         </ProjectReference>
     </ItemGroup>

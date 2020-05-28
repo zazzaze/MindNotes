@@ -66,9 +66,12 @@ namespace MindNotes.ViewModels
                 return;
             ListViewModel.Notes.Remove(noteViewModel);
         }
-        
+
         public Boolean IsValid => !(Title == EmptyTitleText && String.IsNullOrWhiteSpace(Text));
-        
-        
+
+        public override string ToString()
+        {
+            return this.Title;
+        }
     }
 }

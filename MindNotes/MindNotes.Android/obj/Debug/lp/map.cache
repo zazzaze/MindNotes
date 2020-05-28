@@ -1,5 +1,9 @@
 FormsViewGroup
 Plugin.Media
+SkiaSharp
+SkiaSharp.Views.Android
+SkiaSharp.Views.Forms
+TouchTracking.Droid
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common

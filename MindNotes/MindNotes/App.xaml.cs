@@ -14,7 +14,7 @@ namespace MindNotes
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new AllNotesPage());
+            MainPage = new NavigationPage(new MainTabbedPage());
         }
 
         protected override void OnStart()

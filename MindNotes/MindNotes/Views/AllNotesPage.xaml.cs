@@ -12,13 +12,10 @@ namespace MindNotes.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AllNotesPage : ContentPage
     {
-        public AllNotesPage()
+        public AllNotesPage(NotesListViewModel notesListViewModel)
         {
             InitializeComponent();
-            this.BindingContext = new NotesListViewModel
-            {
-                Navigation = this.Navigation
-            };
+            this.BindingContext = notesListViewModel;
         }
     }
 }

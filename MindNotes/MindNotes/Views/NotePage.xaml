@@ -29,7 +29,7 @@
                     Text="Сделать фотографию" Clicked="TakePhotoButton_OnClicked" />
         </StackLayout>
         </Grid>
-        <ContentView x:Name="TextFromPhotoEditorPopUp" BackgroundColor="#C0808080" VerticalOptions="FillAndExpand" 
+        <ContentView x:Name="TextFromPhotoEditorPopUp" BackgroundColor="{StaticResource popupBackgroundColor}" VerticalOptions="FillAndExpand" 
                      HorizontalOptions="FillAndExpand" IsVisible="False" AbsoluteLayout.LayoutBounds="0,0,1,1"
                      AbsoluteLayout.LayoutFlags="All" Padding="10,0">
             <StackLayout Padding="10" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">

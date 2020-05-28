@@ -12,3 +12,5 @@
 /Users/egor/Desktop/Учеба/nis/MindNotes/MindNotes/MindNotes/obj/Debug/netstandard2.0/MindNotes.dll
 /Users/egor/Desktop/Учеба/nis/MindNotes/MindNotes/MindNotes/obj/Debug/netstandard2.0/MindNotes.pdb
 /Users/egor/Desktop/Учеба/nis/MindNotes/MindNotes/MindNotes/obj/Debug/netstandard2.0/Views/NotePage.xaml.g.cs
+/Users/egor/Desktop/Учеба/nis/MindNotes/MindNotes/MindNotes/obj/Debug/netstandard2.0/Views/MainTabbedPage.xaml.g.cs
+/Users/egor/Desktop/Учеба/nis/MindNotes/MindNotes/MindNotes/obj/Debug/netstandard2.0/Views/MindMap.xaml.g.cs

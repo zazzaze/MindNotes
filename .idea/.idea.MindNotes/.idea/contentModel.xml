@@ -37,12 +37,16 @@
               <e p="MindNotes.AssemblyInfo.cs" t="Include" />
               <e p="Views" t="Include">
                 <e p="AllNotesPage.xaml.g.cs" t="Include" />
+                <e p="MainTabbedPage.xaml.g.cs" t="Include" />
+                <e p="MindMap.xaml.g.cs" t="Include" />
                 <e p="NotePage.xaml.g.cs" t="Include" />
               </e>
             </e>
           </e>
         </e>
         <e p="ViewModels" t="Include">
+          <e p="MindMapNotesViewModel.cs" t="Include" />
+          <e p="MindViewModel.cs" t="Include" />
           <e p="NotePageViewModel.cs" t="Include" />
           <e p="NotesListViewModel.cs" t="Include" />
           <e p="NoteViewModel.cs" t="Include" />
@@ -50,6 +54,10 @@
         <e p="Views" t="Include">
           <e p="AllNotesPage.xaml" t="Include" />
           <e p="AllNotesPage.xaml.cs" t="Include" />
+          <e p="MainTabbedPage.xaml" t="Include" />
+          <e p="MainTabbedPage.xaml.cs" t="Include" />
+          <e p="MindMap.xaml" t="Include" />
+          <e p="MindMap.xaml.cs" t="Include" />
           <e p="NotePage.xaml" t="Include" />
           <e p="NotePage.xaml.cs" t="Include" />
         </e>
@@ -61,7 +69,28 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="MainActivity.cs" t="Include" />
         <e p="MindNotes.Android.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="lp" t="Include">
+              <e p="2" t="Include">
+                <e p="nl" t="Include">
+                  <e p="arm64-v8a" t="Include">
+                    <e p="libSkiaSharp.so" t="Include" />
+                  </e>
+                  <e p="armeabi-v7a" t="Include">
+                    <e p="libSkiaSharp.so" t="Include" />
+                  </e>
+                  <e p="x86" t="Include">
+                    <e p="libSkiaSharp.so" t="Include" />
+                  </e>
+                  <e p="x86_64" t="Include">
+                    <e p="libSkiaSharp.so" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Properties" t="Include">
           <e p="AndroidManifest.xml" t="Include" />
           <e p="AssemblyInfo.cs" t="Include" />

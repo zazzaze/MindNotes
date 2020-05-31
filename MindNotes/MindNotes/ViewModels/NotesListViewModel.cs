@@ -21,6 +21,8 @@ namespace MindNotes.ViewModels
         
         public INavigation Navigation { get; set; }
 
+        public MindMapNotesViewModel MindMapNotesViewModel { get; set; }
+
 
         public NotesListViewModel()
         {

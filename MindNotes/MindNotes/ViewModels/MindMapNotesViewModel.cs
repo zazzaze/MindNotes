@@ -13,6 +13,7 @@ namespace MindNotes.ViewModels
         public MindMapNotesViewModel(NotesListViewModel lvm)
         {
             _lvm = lvm;
+            lvm.MindMapNotesViewModel = this;
         }
 
         public NotesListViewModel ListViewModel => _lvm;
@@ -27,6 +28,16 @@ namespace MindNotes.ViewModels
                 _center = value;
                 OnPropertyChanged("Center");
             }
+        }
+
+        public void DeleteNote(NoteViewModel nvm)
+        {
+            if (_center != null && _center.Current == nvm)
+            {
+                _center = null;
+                return;
+            }
+            _center?.DeleteFromChildren(nvm);
         }
 
         public Boolean IsCenterUnenabled => _center == null;

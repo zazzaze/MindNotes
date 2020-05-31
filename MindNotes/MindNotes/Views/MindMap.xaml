@@ -22,7 +22,7 @@
                          AbsoluteLayout.LayoutFlags="All">
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="10" BackgroundColor="White" MinimumWidthRequest="200">
                     <Label Text="Выберите заметку" />
-                    <Picker x:Name="NotePicker" ItemsSource="{Binding ListViewModel.Notes}" />
+                    <Picker x:Name="NotePicker" />
                     <StackLayout Orientation="Horizontal">
                         <Button Text="Закрыть" Clicked="OnPopupTapped" />
                         <Button Text="Добавить" Clicked="AddNoteClicked"></Button>

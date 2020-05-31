@@ -18,19 +18,26 @@ namespace MindNotes.Views
         private MindMapNotesViewModel vm;
         private const Double radius = 150;
         private MindViewModel addTo;
+        private Button centerButton;
         public MindMap(NotesListViewModel lvm)
         {
             InitializeComponent();
             vm = new MindMapNotesViewModel(lvm);
             this.BindingContext = vm;
+            NotePicker.SetBinding(Picker.ItemsSourceProperty, "ListViewModel.Notes");
+            NotePicker.ItemDisplayBinding = new Binding("Title");
+            centerButton = ChooseCenterButton;
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if (vm.Center == null)
-                return;
             absoluteLayout.Children.Clear();
+            if (vm.Center == null)
+            {
+                absoluteLayout.Children.Add(centerButton);
+                return;
+            }
             DrawCenter(vm.Center);
             DrawChildren(vm.Center);
         }
@@ -112,7 +119,7 @@ namespace MindNotes.Views
 
         private async void OnFrameTapped(object sender, EventArgs e)
         {
-            var action = await DisplayActionSheet("", "Отмена", "", 
+            var action = await DisplayActionSheet("", "Отмена",  
                 "Открыть", "Добавить", "Удалить");
             MindViewModel mindViewModel = ((Frame)sender).BindingContext as MindViewModel;
             if (mindViewModel == null)
@@ -125,6 +132,12 @@ namespace MindNotes.Views
                 case "Добавить":
                     addTo = mindViewModel;
                     SelectNoteView.IsVisible = true;
+                    break;
+                case "Удалить":
+                    if (mindViewModel.Parent == null)
+                        return;
+                    mindViewModel.Parent.Childs.Remove(mindViewModel);
+                    OnAppearing();
                     break;
                 default:
                     break;
@@ -147,9 +160,17 @@ namespace MindNotes.Views
             if (selectedNote == null)
                 return;
             if (vm.Center == null)
-                vm.Center = new MindViewModel(selectedNote);
-            else if(addTo != null)
-                addTo.Childs.Add(new MindViewModel(selectedNote));
+            {
+                vm.Center = new MindViewModel(selectedNote, vm);
+                selectedNote.MindMapNotesViewModel = vm;
+            }
+            else if (addTo != null)
+            {
+                MindViewModel mvm = new MindViewModel(selectedNote, vm);
+                mvm.Parent = addTo;
+                addTo.Childs.Add(mvm);
+                selectedNote.MindMapNotesViewModel = vm;
+            }
             else 
                 return;
             SelectNoteView.IsVisible = false;

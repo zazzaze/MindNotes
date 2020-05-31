@@ -13,6 +13,7 @@ namespace MindNotes.ViewModels
         private const String EmptyTitleText = "Без названия";
         public event PropertyChangedEventHandler PropertyChanged;
         private NotesListViewModel _lvm;
+        private MindMapNotesViewModel _mnvm;
         public Note Note { get; private set; }
         public ICommand DeleteNoteCommand { get; protected set; }
         [NotifyPropertyChangedInvocator]
@@ -40,9 +41,19 @@ namespace MindNotes.ViewModels
             }
         }
 
+        public MindMapNotesViewModel MindMapNotesViewModel
+        {
+            get => _mnvm;
+            set
+            {
+                _mnvm = value;
+                OnPropertyChanged("MindMapNotesViewModel");
+            }
+        }
+
         public String Title
         {
-            get => String.IsNullOrWhiteSpace(Note.Title) ? "Без названия" : Note.Title;
+            get => String.IsNullOrWhiteSpace(Note.Title) ? EmptyTitleText : Note.Title;
             set
             {
                 if (String.IsNullOrWhiteSpace(value))
@@ -65,13 +76,16 @@ namespace MindNotes.ViewModels
             if (noteViewModel == null)
                 return;
             ListViewModel.Notes.Remove(noteViewModel);
+            if (_mnvm == null)
+                return;
+            _mnvm.DeleteNote(this);
         }
 
         public Boolean IsValid => !(Title == EmptyTitleText && String.IsNullOrWhiteSpace(Text));
 
         public override string ToString()
         {
-            return this.Title;
+            return "Test";
         }
     }
 }
